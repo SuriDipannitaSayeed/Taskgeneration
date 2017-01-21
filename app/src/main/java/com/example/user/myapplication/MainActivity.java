@@ -230,9 +230,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 nameValuePairs.add(new BasicNameValuePair("asignee", valueIWantToSend[6]));
                 DefaultHttpClient httpclient = new DefaultHttpClient();
                 if(creat.equals("creat")){    httppost = new HttpPost(
-                        "http://192.168.0.104/insert.php");}
+                        "http://192.168.0.110/insert.php");}
               else if(creat.equals("update")){    httppost = new HttpPost(
-                        "http://192.168.0.104/update.php");}{}
+                        "http://192.168.0.110/update.php");}{}
                 httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs, HTTP.UTF_8));
 
                 // Execute HTTP Post Request

@@ -17,7 +17,7 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
         Button login=(Button) findViewById(R.id.button1);
-            uname= (EditText)findViewById(R.id.stime);
+          uname= (EditText)findViewById(R.id.stime);
           pass= (EditText)findViewById(R.id.pass);
         login.setOnClickListener(new OnClickListener() {
 
@@ -29,10 +29,11 @@ public class LoginActivity extends Activity {
                     startActivity(intent);
                 }
 
-    else if (uname.getText().toString().equals("asad")||uname.getText().toString().equals("faruk"))
+    else
                 {
                     PackageManager pm = getPackageManager();
                     Intent intent = pm.getLaunchIntentForPackage("in.wptrafficanalyzer.locationgeocodingv2");
+                    intent.putExtra("Username",uname.getText().toString());
                     startActivity(intent);
 
                 }
